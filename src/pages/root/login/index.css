@@ -1,0 +1,39 @@
+
+.normal {
+  height: 100%;
+  overflow: hidden;
+  background: url("../../../assets/login/backgroud.png") no-repeat top center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.card {
+  height: 650px;
+  width: 1300px;
+  background-color: white;
+  margin: 250px auto;
+  margin-bottom: 0px;
+}
+
+.inbetweening {
+  margin: 100px 100px 0px 100px;
+}
+
+.loginCard {
+  box-sizing: border-box;
+  line-height: 150px;
+  padding: 100px 100px 0px 100px;
+  height: 100%;
+  width: 650px;
+  float: right;
+}
+
+.login-form-forgot {
+  float: right;
+}
+
+.login-form-button {
+  width: 100%;
+}
