@@ -3,6 +3,14 @@
   font-family: Georgia, sans-serif;
   /*text-align: center;*/
   height: 100%;
+  background-color: #FAFAFA;
+}
+
+.content {
+  max-width: 1056px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .title {

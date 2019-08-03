@@ -16,7 +16,10 @@ class Login extends React.Component {
     return (
       <div className={styles.normal}>
         <div className={styles.card}>
-          <img className={styles.inbetweening} src={inbetweeningImg}/>
+          <div className={styles.inbetweening}>
+            <img style={{width: '100%'}} src={inbetweeningImg}/>
+          </div>
+
           <div className={styles.loginCard}>
             <h1>系统管理</h1>
             <Form>

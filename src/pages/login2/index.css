@@ -1,0 +1,56 @@
+
+.loginLayoutLow {
+  width: 430px;
+  margin: auto;
+}
+
+.loginLayoutHigh {
+  padding-top: 96px;
+  width: 430px;
+  margin: auto;
+}
+
+.loginCard {
+  border: #E9E9E9 1px solid;
+  background-color: #FFFFFF;
+  padding: 40px 8px 48px;
+  text-align: center;
+}
+
+.logo {
+  width: 320px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.slogon {
+  width: 320px;
+  margin: 0 auto;
+  line-height: 24px;
+}
+
+.loginForm {
+  width: 320px;
+  margin: 32px auto 0px;
+}
+
+.input {
+
+}
+
+.button {
+  width: 100%;
+}
+
+.remember {
+  text-align: left;
+}
+
+.forgot {
+  float: right;
+}
+
+.otherLogin {
+  width: 320px;
+  margin: 0 auto;
+}
