@@ -9,9 +9,24 @@ const stateConnetor = ({login2}) => {
   return {
     ...login2,
   };
-}
+};
+const optConnetor = (dispatch) => {
+  return {
+    onChange: (event) => {
+      dispatch({
+        type: namespace + "/onChange",
+        event
+      })
+    },
+    onSubmit: () => {
+      dispatch({
+        type: namespace + "/onSubmit",
+      })
+    }
+  }
+};
 
-@connect(stateConnetor)
+@connect(stateConnetor, optConnetor)
 class Login2 extends React.Component {
   constructor(props) {
     super(props);
@@ -43,6 +58,7 @@ class Login2 extends React.Component {
                         prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
                         placeholder="Username"
                         size={'large'}
+                        onChange={this.props.onChange}
                       />,
                     )}
                   </Form.Item>
@@ -56,6 +72,7 @@ class Login2 extends React.Component {
                         type="password"
                         placeholder="Password"
                         size={'large'}
+                        onChange={this.props.onChange}
                       />,
                     )}
                   </Form.Item>
@@ -63,12 +80,12 @@ class Login2 extends React.Component {
                     {getFieldDecorator('remember', {
                       valuePropName: 'checked',
                       initialValue: remember,
-                    })(<Checkbox>Remember me</Checkbox>)}
+                    })(<Checkbox onChange={this.props.onChange}>Remember me</Checkbox>)}
                     <a href="/" className={styles.forgot}>
                       Forgot password
                     </a><br/>
                   </Form.Item>
-                  <Button type="primary" htmlType="submit" size={'large'} className={styles.button}>
+                  <Button type="primary" htmlType="submit" size={'large'} className={styles.button} onClick={this.props.onSubmit}>
                     Log in
                   </Button>
                 </Form>
