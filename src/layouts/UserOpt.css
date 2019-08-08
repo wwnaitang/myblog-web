@@ -1,0 +1,21 @@
+
+.userOpt {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.optGroup {
+  padding: 0px 10px;
+  line-height: 0px;
+}
+
+.newMenu {}
+
+.notifications {
+
+}
+
+.userMenu {
+
+}

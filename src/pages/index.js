@@ -1,8 +1,11 @@
 import styles from './index.css';
+import router from 'umi/router';
 
 
 export default function() {
-  return (
+  router.push("/login2");
+  return null;
+  /*return (
     <div className={styles.normal}>
       <div className={styles.welcome} />
       <ul className={styles.list}>
@@ -14,5 +17,5 @@ export default function() {
         </li>
       </ul>
     </div>
-  );
+  );*/
 }
