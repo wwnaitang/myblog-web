@@ -4,18 +4,18 @@ import { Avatar, Badge, Dropdown, Icon, Menu, Popover } from 'antd';
 import { connect } from 'react-redux';
 
 const namespace = 'user';
-const stateConnetor = ({user}) => {
+const stateConnector = ({user}) => {
   return {
     ...user,
   };
 };
-const optConnetor = (dispatch) => {
+const optConnector = (dispatch) => {
   return {
 
   }
 };
 
-@connect(stateConnetor, optConnetor)
+@connect(stateConnector, optConnector)
 class UserOpt extends React.Component{
 
   constructor(props) {
@@ -69,7 +69,7 @@ class UserOpt extends React.Component{
           </Dropdown>
         </div>
         <div id={"notifications"} className={styles.optGroup} onMouseOver={this.mouseMoveOn} onMouseOut={this.mouseMoveOut}>
-          <Badge count={10} dot>
+          <Badge count={this.props.notificationsCount} dot>
             <Icon type={"notification"}
                   style={target === "notifications" ?
                     {fontSize: "16px", paddingRight: "2px", color: "#1890ff"} : {fontSize: "16px", paddingRight: "2px"}}/>

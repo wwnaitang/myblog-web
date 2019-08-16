@@ -2,7 +2,7 @@ import React from 'react';
 import { Icon, Input, Layout, Menu } from 'antd';
 import styles from './Header.css';
 import UserOpt from '@/layouts/UserOpt';
-import menu from 'eslint-plugin-jsx-a11y/src/util/implicitRoles/menu';
+import {Link} from 'umi';
 
 class Header extends React.Component{
   constructor(props) {
@@ -30,9 +30,9 @@ class Header extends React.Component{
       <Header className={styles.normal}>
         <div className={styles.headerView}>
           <div className={styles.logo}>
-            <a href="http://localhost:8000">
+            <Link to={"/"}>
               <img src="" alt="语雀"/>
-            </a>
+            </Link>
           </div>
           <div className={styles.userView}>
             <UserOpt />
@@ -49,6 +49,9 @@ class Header extends React.Component{
                   defaultSelectedKeys={this.state.currentMenu}
             >
               <Item key={"login2"} style={{border: '0px'}}>首页</Item>
+              <Item key={"workspace"} style={{border: '0px'}}>
+                <Link to={"/workspace"}></Link>工作台
+              </Item>
               <Item key={"root"} style={{border: '0px'}}>知识库</Item>
               <Item style={{border: '0px'}}>相册</Item>
               <Item style={{border: '0px'}}>关于我</Item>

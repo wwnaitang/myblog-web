@@ -1,0 +1,16 @@
+
+.workspace {
+  padding-top: 26px;
+}
+
+.menuItem {
+  border: 0px;
+}
+
+.menuItem:hover {
+  background-color: #F2F4F6;
+}
+
+.menuItem:active {
+  background-color: #F2F4F6;
+}

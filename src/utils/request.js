@@ -123,16 +123,17 @@ export default function request(url, option) {
     .then(response => {
       // DELETE and 204 do not return data by default
       // using .json will report an error.
+      console.log(response);
       if (newOptions.method === 'DELETE' || response.status === 204) {
         return response.text();
       }
       return response.json();
     })
     .catch(e => {
-      const status = e.name;
+      /*const status = e.name;
       if (status === 401) {
         // @HACK
-        /* eslint-disable no-underscore-dangle */
+        /!* eslint-disable no-underscore-dangle *!/
         window.g_app._store.dispatch({
           type: 'login/logout',
         });
@@ -149,6 +150,6 @@ export default function request(url, option) {
       }
       if (status >= 404 && status < 422) {
         router.push('/exception/404');
-      }
+      }*/
     });
 }

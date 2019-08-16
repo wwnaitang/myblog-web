@@ -1,7 +1,8 @@
 export default {
   namespace: "user",
   state: {
-    currentUser: {}
+    currentUser: {},
+    notificationsCount: 1,
   },
   reducers: {
 

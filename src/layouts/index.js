@@ -10,7 +10,7 @@ class BasicLayout extends React.Component {
     const notExistsHead = ["/"];
     if (notExistsHead.find((n) => n === this.props.location.pathname)) {
       return (
-        <div className={styles.normal}>
+        <div>
           {this.props.children}
         </div>
       );
@@ -19,14 +19,12 @@ class BasicLayout extends React.Component {
       return (
         <Layout>
           <Header {...this.props}/>
-          <Content>
-            <div className={styles.normal}>
-              {/*<h1 className={styles.title}>Yay! Welcome to umi!</h1>*/}
+          <Content className={styles.normal}>
+            {/*<h1 className={styles.title}>Yay! Welcome to umi!</h1>*/}
 
-              <div className={styles.content}>
-                {this.props.children}
+            <div className={styles.content}>
+              {this.props.children}
               </div>
-            </div>
           </Content>
         </Layout>
       );

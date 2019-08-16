@@ -2,15 +2,15 @@
 .normal {
   font-family: Georgia, sans-serif;
   /*text-align: center;*/
-  height: 100%;
   background-color: #FAFAFA;
+  min-height: calc(100vh - 64px);
 }
 
 .content {
-  max-width: 1056px;
-  height: 100%;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0px 16px;
 }
 
 .title {

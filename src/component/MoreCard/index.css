@@ -1,0 +1,16 @@
+
+.moreCard {
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: 8px;
+}
+
+.content {
+  padding: 12px 12px 12px 12px;
+  background-color: #FFFFFF;
+  border: 1px solid #e8e8e8;
+  height: 71px;
+  text-align: center;
+  line-height: 45px;
+}
+

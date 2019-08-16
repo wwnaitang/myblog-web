@@ -10,7 +10,7 @@ export default {
       dynamicImport: false,
       title: 'myblog',
       dll: false,
-      
+
       routes: {
         exclude: [
           /models\//,
@@ -22,4 +22,16 @@ export default {
       },
     }],
   ],
+  theme: {
+    "menu-item-active-bg": "rgba(0, 0, 0, 0)",
+  },
+  publicPath: "./",
+  history: "hash",
+  /*proxy: {
+    '/api': {
+      target: 'http://jsonplaceholder.typicode.com/',
+      pathRewrite: { '^/api': '' },
+      changeOrigin: true
+    }
+  }*/
 }

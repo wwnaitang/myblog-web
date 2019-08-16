@@ -1,0 +1,14 @@
+
+.workspace {
+  padding-top: 26px;
+}
+
+.menuItem {
+  border: 0px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
