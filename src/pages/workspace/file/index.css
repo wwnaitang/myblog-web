@@ -1,0 +1,32 @@
+
+.content {
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+}
+
+.head {
+  padding: 0px 16px;
+  height: 52px;
+  overflow: hidden;
+}
+
+.extra {
+  float: right;
+  padding: 10px 0px;
+}
+
+.searchInput {
+  width: 200px;
+}
+
+.newButton {
+  margin-left: 8px;
+}
+
+.table {
+  border-top: 1px solid #e8e8e8;
+}
+
+.title {
+  padding: 10px 0px;
+}

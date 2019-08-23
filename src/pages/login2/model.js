@@ -26,7 +26,7 @@ export default {
       }
       return state;
     },
-    onSubmit: (state) => {
+    onSubmit: (state, data) => {
       let {user, remember} = state;
       console.log(remember);
       console.log(user.username + ":" + user.password);

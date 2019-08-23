@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './index.css';
 import { Col, Icon, Menu, Row } from 'antd';
 import LeftMenuDivider from '@/component/LeftMenuDivider';
+import {Link} from 'umi';
 
 class LeftMenu extends React.Component{
 
@@ -15,8 +16,8 @@ class LeftMenu extends React.Component{
 
   componentWillMount() {
     let path = this.props.location.pathname.split("/");
-    if (path.size > 1 && path[1]) {
-      this.setState({defaultMenuItem: [path[1]]})
+    if (path.length > 2 && path[2]) {
+      this.setState({defaultMenuItem: [path[2]]})
     } else {
       this.setState({defaultMenuItem: ["home"]})
     }
@@ -40,17 +41,22 @@ class LeftMenu extends React.Component{
             <Menu defaultSelectedKeys={this.state.defaultMenuItem}
                   style={{border: "0px", backgroundColor: "rgba(0, 0, 0, 0)"}}>
               <Item key={"home"} className={styles.menuItem}>
-                <Icon type="appstore" />工作台
+                <Link to={"/workspace"}>
+                  <Icon type="appstore" />工作台
+                </Link>
               </Item>
               <LeftMenuDivider/>
-              <Item className={styles.menuItem}>
+              <Item key={"file"} className={styles.menuItem}>
+                <Link to={"/workspace/file"}/>
                 <Icon type="file-text" />文档
               </Item>
-              <Item className={styles.menuItem}>
+              <Item key={"book"} className={styles.menuItem}>
+                <Link to={"/workspace/book"}/>
                 <Icon type="book" />知识库
               </Item>
               <LeftMenuDivider/>
-              <Item className={styles.menuItem}>
+              <Item key={"rest"} className={styles.menuItem}>
+                <Link to={"/workspace/rest"}/>
                 <Icon type="rest" />回收站
               </Item>
             </Menu>

@@ -18,9 +18,10 @@ const optConnetor = (dispatch) => {
         event
       })
     },
-    onSubmit: () => {
+    onSubmit: (data) => {
       dispatch({
         type: namespace + "/onSubmit",
+        data,
       })
     }
   }
@@ -30,6 +31,11 @@ const optConnetor = (dispatch) => {
 class Login2 extends React.Component {
   constructor(props) {
     super(props);
+  }
+
+  onSubmit = () => {
+    let data = this.props.form.getFieldsValue();
+    this.props.onSubmit(data);
   }
   render() {
     let {remember, user} = this.props;
@@ -85,7 +91,7 @@ class Login2 extends React.Component {
                       Forgot password
                     </a><br/>
                   </Form.Item>
-                  <Button type="primary" htmlType="submit" size={'large'} className={styles.button} onClick={this.props.onSubmit}>
+                  <Button type="primary" htmlType="submit" size={'large'} className={styles.button} onClick={this.onSubmit}>
                     Log in
                   </Button>
                 </Form>
